@@ -248,7 +248,7 @@ page.onLoadFinished = function (status) {
             // Push the results of the test out to the Phantom listener.
             console.log('The test collection has been evaluated.');
             console.log(JSON.stringify(testCollection));
-            callPhantom('writeData', JSON.stringify(testCollection));
+            //callPhantom('writeData', JSON.stringify(testCollection));
           }
         });
       }, tests, size, wcag2structure, preconditionTests, address);
