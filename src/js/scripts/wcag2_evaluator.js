@@ -247,7 +247,7 @@ page.onLoadFinished = function (status) {
           testCollectionComplete: function (eventName, testCollection) {
             // Push the results of the test out to the Phantom listener.
             console.log('The test collection has been evaluated.');
-            //console.log(JSON.stringify(testCollection));
+            console.log(JSON.stringify(testCollection));
             callPhantom('writeData', JSON.stringify(testCollection));
           }
         });
