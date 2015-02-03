@@ -151,8 +151,8 @@ var timestamp = [
   '-',
   date.getTime()
 ].join('');
-var resultsFile = dir + '/analyses/' + timestamp + '-analysis.js';
-var stream = fs.open(resultsFile, 'w');
+//var resultsFile = dir + '/analyses/' + timestamp + '-analysis.js';
+//var stream = fs.open(resultsFile, 'w');
 // The data to be written to file.
 var output = {};
 var start = (new Date()).getTime();
@@ -191,10 +191,10 @@ page.onCallback = function(action, data) {
       console.log('Cases found: ' + (output.stats && output.stats.cases || 0));
       console.log('Results were written to ' + resultsFile);
       var out = JSON.stringify(output);
-      stream.write(out);
+      //stream.write(out);
       // Also write the output to the console.
-      // console.log(out);
-      stream.close();
+       console.log(out);
+      //stream.close();
       quitPhantom('Testing complete');
     }
     break;
@@ -247,7 +247,7 @@ page.onLoadFinished = function (status) {
           testCollectionComplete: function (eventName, testCollection) {
             // Push the results of the test out to the Phantom listener.
             console.log('The test collection has been evaluated.');
-            console.log(JSON.stringify(testCollection));
+            //console.log(JSON.stringify(testCollection));
             //callPhantom('writeData', JSON.stringify(testCollection));
           }
         });
