@@ -189,7 +189,7 @@ page.onCallback = function(action, data) {
     if (len === 0) {
       console.log('Elapsed time: ' + ((new Date()).getTime() - start) / 1000 + ' seconds');
       console.log('Cases found: ' + (output.stats && output.stats.cases || 0));
-      console.log('Results were written to ' + resultsFile);
+      //console.log('Results were written to ' + resultsFile);
       var out = JSON.stringify(output);
       //stream.write(out);
       // Also write the output to the console.
