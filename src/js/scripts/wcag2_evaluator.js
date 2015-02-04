@@ -193,7 +193,7 @@ page.onCallback = function(action, data) {
       var out = JSON.stringify(output);
       //stream.write(out);
       // Also write the output to the console.
-       console.log(out);
+      // console.log(out);
       //stream.close();
       quitPhantom('Testing complete');
     }
@@ -248,7 +248,7 @@ page.onLoadFinished = function (status) {
             // Push the results of the test out to the Phantom listener.
             console.log('The test collection has been evaluated.');
             console.log(JSON.stringify(testCollection));
-            //callPhantom('writeData', JSON.stringify(testCollection));
+            callPhantom('writeData', JSON.stringify(testCollection));
           }
         });
       }, tests, size, wcag2structure, preconditionTests, address);
